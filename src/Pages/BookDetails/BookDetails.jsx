@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { setReadBook, setWishBook } from "../../utills/localStorage";
 
 function BookDetails() {
 	const { id } = useParams();
@@ -26,6 +27,7 @@ function BookDetails() {
 		totalPages,
 		publisher,
 		yearOfPublishing,
+		bookId,
 	} = bookDetail || [];
 	return (
 		<>
@@ -91,11 +93,21 @@ function BookDetails() {
 						</div>
 
 						<div className="mt-8 flex gap-4">
-							<button className="py-[18px] px-7 rounded-lg text-[#131313] text-lg font-semibold font-work border border-[#1313134D] hover:bg-[#1313130c]">
+							<button
+								onClick={() => {
+									setReadBook(bookId);
+								}}
+								className="py-[18px] px-7 rounded-lg text-[#131313] text-lg font-semibold font-work border border-[#1313134D] hover:bg-[#1313130c]"
+							>
 								Read
 							</button>
 
-							<button className="py-[18px] px-7 rounded-lg bg-[#50B1C9] text-white font-semibold text-lg font-work hover:bg-[#50b1c9e2] ">
+							<button
+								onClick={() => {
+									setWishBook(bookId);
+								}}
+								className="py-[18px] px-7 rounded-lg bg-[#50B1C9] text-white font-semibold text-lg font-work hover:bg-[#50b1c9e2] "
+							>
 								Wishlist
 							</button>
 						</div>
