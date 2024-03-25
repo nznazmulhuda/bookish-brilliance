@@ -1,9 +1,10 @@
-import { Banner } from "../../Components";
+import { Banner, Books } from "../../Components";
 
 function Home() {
 	return (
 		<>
 			<Banner />
+			<Books />
 		</>
 	);
 }
