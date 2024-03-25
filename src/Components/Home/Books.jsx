@@ -1,8 +1,14 @@
+import { useEffect, useState } from "react";
 import Book from "./Book";
-import { useLoaderData } from "react-router-dom";
 
 function Books() {
-	const books = useLoaderData();
+	const [books, setBooks] = useState([]);
+
+	useEffect(() => {
+		fetch("Books.json")
+			.then((res) => res.json())
+			.then((data) => setBooks(data));
+	}, []);
 
 	return (
 		<>
