@@ -19,15 +19,15 @@ const router = createBrowserRouter([
 				element: <Home />,
 			},
 			{
-				path: "/listed-books",
+				path: "/listed_books",
 				element: <ListedBooks />,
 			},
 			{
-				path: "pages-to-read",
+				path: "pages_to_read",
 				element: <PagesToRead />,
 			},
 			{
-				path: "/book-details/:id",
+				path: "/book_details/:id",
 				element: <BookDetails />,
 			},
 		],
