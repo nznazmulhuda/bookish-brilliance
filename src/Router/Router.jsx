@@ -6,6 +6,8 @@ import {
 	ListedBooks,
 	Home,
 	BookDetails,
+	SingIn,
+	SingUp,
 } from "../Pages";
 import { ReadBooks, WishBooks } from "../Components/";
 
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
 			{
 				path: "/book_details/:id",
 				element: <BookDetails />,
+			},
+			{
+				path: "/signIn",
+				element: <SingIn />,
+			},
+			{
+				path: "/signUp",
+				element: <SingUp />,
 			},
 		],
 	},

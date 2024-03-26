@@ -3,5 +3,15 @@ import PagesToRead from "./PagesToRead/PagesToRead";
 import ListedBooks from "./ListedBooks/ListedBooks";
 import Home from "./Home/Home";
 import BookDetails from "./BookDetails/BookDetails";
+import SingIn from "./SingIn/SingIn";
+import SingUp from "./SingUp/SingUp";
 
-export { ErrorPage, PagesToRead, ListedBooks, Home, BookDetails };
+export {
+	ErrorPage,
+	PagesToRead,
+	ListedBooks,
+	Home,
+	BookDetails,
+	SingIn,
+	SingUp,
+};

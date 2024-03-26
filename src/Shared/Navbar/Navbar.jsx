@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Navbar() {
 	return (
@@ -112,23 +112,31 @@ function Navbar() {
 				</div>
 
 				<div className="hidden sm:flex lg:flex navbar-end gap-4">
-					<button className="bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
-						Sign In
+					<button className=" font-work bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
+						<Link to={"/signIn"} className=" font-work">
+							Sign In
+						</Link>
 					</button>
 
 					<button className="bg-[#59C6D2] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
-						Sign Up
+						<Link to={"/signUp"} className=" font-work">
+							Sign Up
+						</Link>
 					</button>
 				</div>
 			</div>
 
-			<div className="flex justify-between sm:hidden lg:hidden px-3">
+			<div className="flex justify-between sm:hidden lg:hidden px-3 font-work">
 				<button className="bg-[#23BE0A] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
-					Sign In
+					<Link to={"/signIn"} className=" font-work">
+						Sign In
+					</Link>
 				</button>
 
 				<button className="bg-[#59C6D2] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
-					Sign Up
+					<Link to={"/signUp"} className=" font-work">
+						Sign Up
+					</Link>
 				</button>
 			</div>
 		</>
