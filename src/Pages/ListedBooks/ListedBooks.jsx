@@ -56,7 +56,7 @@ function ListedBooks() {
 	useEffect(() => {
 		const books = getReadBookFromLocalStorage();
 		const wishBooks = getWishListBookFromLocalStorage();
-		fetch("/Books.json")
+		fetch("https://assignment-8-json-data.vercel.app/Books.json")
 			.then((res) => res.json())
 			.then((data) => {
 				setReadBooks(data.filter((d) => books.includes(d.bookId))),

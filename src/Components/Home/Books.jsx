@@ -5,7 +5,7 @@ function Books() {
 	const [books, setBooks] = useState([]);
 
 	useEffect(() => {
-		fetch("Books.json")
+		fetch("https://assignment-8-json-data.vercel.app/Books.json")
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
 	}, []);

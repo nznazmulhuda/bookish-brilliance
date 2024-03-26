@@ -27,7 +27,7 @@ const PagesToRead = () => {
 
 	useEffect(() => {
 		const books = getReadBookFromLocalStorage();
-		fetch("/Books.json")
+		fetch("https://assignment-8-json-data.vercel.app/Books.json")
 			.then((res) => res.json())
 			.then((datas) => {
 				setdata(datas.filter((d) => books.includes(d.bookId)));

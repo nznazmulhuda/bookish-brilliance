@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import BannerImage from "../../assets/banner.png";
+import BannerImage from "/banner.png";
 
 function Banner() {
 	return (
@@ -17,7 +17,7 @@ function Banner() {
 							</button>
 						</div>
 					</div>
-                    
+
 					<div className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
 						<img
 							src={BannerImage}

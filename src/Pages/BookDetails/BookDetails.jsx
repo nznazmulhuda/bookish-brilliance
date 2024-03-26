@@ -8,7 +8,7 @@ function BookDetails() {
 	const [bookDetail, setBookDetail] = useState([]);
 
 	useEffect(() => {
-		fetch("/Books.json")
+		fetch("https://assignment-8-json-data.vercel.app/Books.json")
 			.then((res) => res.json())
 			.then((datas) =>
 				setBookDetail(datas.filter((data) => data.bookId === id)[0])
