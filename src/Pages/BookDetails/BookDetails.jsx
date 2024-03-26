@@ -32,31 +32,31 @@ function BookDetails() {
 	return (
 		<>
 			<section className="mt-5 container mx-auto">
-				<div className="grid grid-cols-2 items-center gap-6">
-					<div className="h-[75vh] bg-[#1313130D] flex items-center justify-center rounded-3xl">
+				<div className="lg:grid grid-cols-2 items-center gap-6 p-4 sm:p-6 lg:p-0">
+					<div className="h-[80vh] sm:h-[90vh] lg:h-[75vh] bg-[#1313130D] flex items-center justify-center rounded-3xl">
 						<img
-							className="w-3/5 h-[70vh] rounded-lg"
+							className="w-[80%] sm:w-[40%] lg:w-3/5 h-[67vh] sm:h-[80vh] lg:h-[70vh] rounded-lg"
 							src={image}
 							alt={bookName}
 						/>
 					</div>
 
-					<div className="flex flex-col justify-between">
-						<h1 className="text-[#131313] text-[40px] font-bold font-play">
+					<div className="flex flex-col justify-between mt-4 lg:mt-0">
+						<h1 className="text-[#131313] text-2xl sm:text-[30px] lg:text-[40px] font-bold font-play">
 							{bookName}
 						</h1>
 
-						<p className="text-[#131313CC] text-xl font-medium font-work">
+						<p className="text-[#131313CC] text-sm sm:text-lg lg:text-xl font-medium mt-2 sm:mt-4 lg:mt-6 font-work">
 							By: {author}{" "}
 						</p>
 
-						<div className="divider"></div>
+						<div className="divider m-0 sm:my-1 lg:my-2"></div>
 
-						<p className="text-[#131313CC] text-xl font-medium font-work">
+						<p className="text-[#131313CC] text-sm sm:text-lg lg:text-xl font-medium font-work">
 							{category}
 						</p>
 
-						<div className="divider"></div>
+						<div className="divider m-0 sm:my-1 lg:my-2"></div>
 
 						<p className="text-[16px] font-work leading-7 font-normal">
 							<span className="text-[#131313] font-bold">
@@ -92,12 +92,12 @@ function BookDetails() {
 							</div>
 						</div>
 
-						<div className="mt-8 flex gap-4">
+						<div className="mt-8 flex justify-center lg:justify-start gap-4">
 							<button
 								onClick={() => {
 									setReadBook(bookId);
 								}}
-								className="py-[18px] px-7 rounded-lg text-[#131313] text-lg font-semibold font-work border border-[#1313134D] hover:bg-[#1313130c]"
+								className="py-2 sm:py-3 lg:py-[18px] px-4 sm:px-5 lg:px-7 rounded-lg text-[#131313] text-lg font-semibold font-work border border-[#1313134D] hover:bg-[#1313130c]"
 							>
 								Read
 							</button>
@@ -106,7 +106,7 @@ function BookDetails() {
 								onClick={() => {
 									setWishBook(bookId);
 								}}
-								className="py-[18px] px-7 rounded-lg bg-[#50B1C9] text-white font-semibold text-lg font-work hover:bg-[#50b1c9e2] "
+								className="py-2 sm:py-3 lg:py-[18px] px-4 sm:px-5 lg:px-7 rounded-lg bg-[#50B1C9] text-white font-semibold text-lg font-work hover:bg-[#50b1c9e2] "
 							>
 								Wishlist
 							</button>

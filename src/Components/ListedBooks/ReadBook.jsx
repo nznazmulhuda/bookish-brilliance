@@ -42,8 +42,8 @@ function ReadBook({ readBook }) {
 							<span className="text-[#131313] font-bold leading-7 font-work">
 								Tag
 							</span>
-							{tags.map((tag) => (
-								<span key={tag}>#{tag}</span>
+							{tags.map((tag, id) => (
+								<span key={`${tag}_${id}`}>#{tag}</span>
 							))}
 						</p>
 

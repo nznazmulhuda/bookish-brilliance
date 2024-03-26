@@ -4,12 +4,14 @@ import PropTypes from "prop-types";
 
 function Book({ book }) {
 	const { bookName, author, image, category, tags, rating, bookId } = book;
-
 	return (
 		<>
 			<Link to={`/book_details/${bookId}`}>
 				<div className="card bg-base-100 shadow-xl p-6 pb-0 border border-[#13131326]">
-					<figure className="h-[230px] bg-[#F3F3F3] rounded-2xl">
+					<figure
+						className="h-[230px] bg-[#F3F3F3] rounded-2xl"
+						title={bookName}
+					>
 						<div className="w-[134px] h-[40vh] lg:h-[25vh]">
 							<img
 								className="w-full h-full rounded-lg"
@@ -18,6 +20,7 @@ function Book({ book }) {
 							/>
 						</div>
 					</figure>
+
 					<div className="card-body px-0 -space-y-1">
 						<div className="space-x-3 px-3">
 							{tags.map((tag, id) => (

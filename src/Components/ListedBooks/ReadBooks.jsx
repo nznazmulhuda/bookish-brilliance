@@ -9,7 +9,7 @@ function ReadBooks() {
 			<div className="mt-10 space-y-5">
 				{displayBooks.length > 0 ? (
 					displayBooks.map((readBook) => (
-						<ReadBook key={ReadBook.bookId} readBook={readBook} />
+						<ReadBook key={readBook.bookId} readBook={readBook} />
 					))
 				) : (
 					<div className="-mt-20">
