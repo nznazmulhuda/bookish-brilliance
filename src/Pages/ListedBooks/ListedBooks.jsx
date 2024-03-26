@@ -1,5 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import {
 	MdOutlineKeyboardArrowDown,
 	MdOutlineKeyboardArrowUp,
@@ -16,30 +18,31 @@ function ListedBooks() {
 	const [displayBooks, setDisplayBooks] = useState([]);
 	const [displayBooksWish, setDisplayBooksWish] = useState([]);
 	const [wishBooks, setWishBooks] = useState([]);
+	const [tabIndex, setTabIndex] = useState(0);
 
 	function handleSort(sortType) {
 		if (sortType === "rating") {
 			setIsSort(!isSort);
-			setDisplayBooks(readBooks.sort((a, b) => a.rating - b.rating));
-			setDisplayBooksWish(wishBooks.sort((a, b) => a.rating - b.rating));
+			setDisplayBooks(readBooks.sort((a, b) => b.rating - a.rating));
+			setDisplayBooksWish(wishBooks.sort((a, b) => b.rating - a.rating));
 		} else if (sortType === "pageNumber") {
 			setIsSort(!isSort);
 			setDisplayBooks(
-				readBooks.sort((a, b) => a.totalPages - b.totalPages)
+				readBooks.sort((a, b) => b.totalPages - a.totalPages)
 			);
 			setDisplayBooksWish(
-				wishBooks.sort((a, b) => a.totalPages - b.totalPages)
+				wishBooks.sort((a, b) => b.totalPages - a.totalPages)
 			);
 		} else if (sortType === "pubsishYear") {
 			setIsSort(!isSort);
 			setDisplayBooks(
 				readBooks.sort(
-					(a, b) => a.yearOfPublishing - b.yearOfPublishing
+					(a, b) => b.yearOfPublishing - a.yearOfPublishing
 				)
 			);
 			setDisplayBooksWish(
 				wishBooks.sort(
-					(a, b) => a.yearOfPublishing - b.yearOfPublishing
+					(a, b) => b.yearOfPublishing - a.yearOfPublishing
 				)
 			);
 		} else {
@@ -70,7 +73,7 @@ function ListedBooks() {
 				</h1>
 			</div>
 
-			<div className="flex items-center relative justify-center mt-7">
+			<div className="flex items-center relative justify-center mt-5">
 				<button
 					onClick={() => {
 						setIsSort(!isSort);
@@ -102,23 +105,39 @@ function ListedBooks() {
 				</div>
 			</div>
 
-			<div className="container mx-auto space-x-5 mt-10 border-b">
-				<NavLink
-					to={""}
-					className="text-[#131313CC] font-work text-lg btn"
-				>
-					Read Books
-				</NavLink>
+			<Tabs
+				selectedIndex={tabIndex}
+				onSelect={(index) => setTabIndex(index)}
+				className="container mx-auto space-x-5 mt-16"
+			>
+				<TabList>
+					<Tab>
+						<NavLink
+							to={""}
+							className="text-[#131313CC] font-work text-lg p-4"
+						>
+							Read Books
+						</NavLink>
+					</Tab>
 
-				<NavLink
-					to={"wishlist"}
-					className="text-[#131313CC] font-work text-lg btn"
-				>
-					Wishlist Books
-				</NavLink>
-			</div>
+					<Tab>
+						<NavLink
+							to={"wishlist"}
+							className="text-[#131313CC] font-work text-lg p-4"
+						>
+							Wishlist Books
+						</NavLink>
+					</Tab>
+				</TabList>
 
-			<Outlet context={{ displayBooks, displayBooksWish }} />
+				<TabPanel>
+					<Outlet context={{ displayBooks, displayBooksWish }} />
+				</TabPanel>
+
+				<TabPanel>
+					<Outlet context={{ displayBooks, displayBooksWish }} />
+				</TabPanel>
+			</Tabs>
 		</>
 	);
 }

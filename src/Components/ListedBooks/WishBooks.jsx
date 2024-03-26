@@ -2,8 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import WishBook from "./WishBook";
 
 function WishBooks() {
-    const { displayBooksWish } = useOutletContext();
-	console.log(displayBooksWish);
+	const { displayBooksWish } = useOutletContext();
 
 	return (
 		<>
