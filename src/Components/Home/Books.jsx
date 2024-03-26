@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Spinner } from "../";
 import Book from "./Book";
+import { Spinner } from "../";
 
 function Books() {
 	const [books, setBooks] = useState([]);
@@ -18,9 +18,9 @@ function Books() {
 						<h2 className="text-[40px] font-bold font-play">
 							Books
 						</h2>
-						{books.length === 0 && <Spinner />}
+						{books.length === 0 && <Spinner tog={true} />}
 					</div>
-					<div className="grid grid-cols-3 gap-6">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 						{books.map((book) => (
 							<Book key={book.bookId} book={book} />
 						))}

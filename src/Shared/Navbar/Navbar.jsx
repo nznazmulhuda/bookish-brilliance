@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function Navbar() {
 	return (
 		<>
-			<div className="navbar bg-base-100 container mx-auto mt-12">
+			<div className="navbar bg-base-100 container mx-auto mt-6 lg:mt-12">
 				<div className="navbar-start">
 					<div className="dropdown">
 						<div
@@ -68,7 +68,7 @@ function Navbar() {
 
 					<NavLink
 						to={"/"}
-						className="btn btn-ghost text-[#131313] font-work text-3xl font-bold"
+						className="btn btn-ghost text-[#131313] font-work text-2xl lg:text-3xl font-bold"
 					>
 						Bookish Brilliance
 					</NavLink>
@@ -111,15 +111,25 @@ function Navbar() {
 					</ul>
 				</div>
 
-				<div className="navbar-end gap-4">
-					<button className="bg-[#23BE0A] py-[18px] px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
+				<div className="hidden sm:flex lg:flex navbar-end gap-4">
+					<button className="bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
 						Sign In
 					</button>
 
-					<button className="bg-[#59C6D2] py-[18px] px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
+					<button className="bg-[#59C6D2] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
 						Sign Up
 					</button>
 				</div>
+			</div>
+
+			<div className="flex justify-between sm:hidden lg:hidden px-3">
+				<button className="bg-[#23BE0A] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
+					Sign In
+				</button>
+
+				<button className="bg-[#59C6D2] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
+					Sign Up
+				</button>
 			</div>
 		</>
 	);

@@ -5,20 +5,20 @@ import "./Banner.css";
 function Banner() {
 	return (
 		<>
-			<section className="background bg-no-repeat mt-12 container mx-auto text-[#000000f6] rounded-3xl">
-				<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
-					<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:text-left w-[45%]">
-						<h1 className="text-[56px] font-bold leading-[84px] font-Play drop-shadow-lg">
+			<section className="background bg-no-repeat mt-6 lg:mt-12 container mx-auto text-[#000000f6] rounded-3xl">
+				<div className="container flex flex-col-reverse sm:flex-row justify-center  mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
+					<div className="flex flex-col justify-center p-6 text-center sm:text-left rounded-sm lg:text-left lg:w-[45%]">
+						<h1 className="text-2xl sm:text-4xl lg:text-[56px] font-bold leading-[40px] lg:leading-[84px] font-Play drop-shadow-lg">
 							<span className="font-bold bg-gradient-to-r from-green-700 via-blue-500 to-green-400 text-transparent bg-clip-text animate-gradient bg-300%">
-								Discovering
+								Discovering <br />
 							</span>{" "}
 							the world of books
 						</h1>
 
-						<div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+						<div className="flex justify-center sm:justify-start lg:justify-start ">
 							<Link
 								to={"/listed_books"}
-								className="relative transition duration-300 hover:bg-green-500 ease bg-[#23BE0A] py-5 px-7 rounded-lg text-white font-bold text-xl font-work mt-12"
+								className="relative transition duration-300 hover:bg-green-500 ease bg-[#23BE0A] py-2 px-2 sm:px-4 lg:py-5 lg:px-7 rounded-lg text-white font-bold lg:text-xl font-work mt-6 lg:mt-12"
 							>
 								<span className="absolute bottom-0 left-0 h-full -ml-2">
 									<svg

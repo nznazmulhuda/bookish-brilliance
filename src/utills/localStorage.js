@@ -23,7 +23,7 @@ export const setReadBook = (id) => {
 	if (oldReadId.find((ID) => ID === id)) {
 		toast.error("Already exists! Check Listed Books");
 	} else {
-		localStorage.setItem("read", JSON.stringify([...oldReadId, id]));
+		localStorage.setItem("read", JSON.stringify([id, ...oldReadId]));
 		toast.success("Congratulations! You read this book.");
 	}
 };
@@ -41,7 +41,7 @@ export const setWishBook = (id) => {
 		}
 		return toast.error("Already exists is wishlist!");
 	} else {
-		localStorage.setItem("wish", JSON.stringify([...oldWishId, id]));
+		localStorage.setItem("wish", JSON.stringify([id, ...oldWishId]));
 		toast.success("Success to add wishlist!");
 	}
 };

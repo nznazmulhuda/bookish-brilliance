@@ -10,7 +10,7 @@ function Book({ book }) {
 			<Link to={`/book_details/${bookId}`}>
 				<div className="card bg-base-100 shadow-xl p-6 pb-0 border border-[#13131326]">
 					<figure className="h-[230px] bg-[#F3F3F3] rounded-2xl">
-						<div className="w-[134px] h-[25vh]">
+						<div className="w-[134px] h-[40vh] lg:h-[25vh]">
 							<img
 								className="w-full h-full rounded-lg"
 								src={image}
@@ -23,16 +23,18 @@ function Book({ book }) {
 							{tags.map((tag, id) => (
 								<small
 									key={id}
-									className="text-[#23BE0A] font-work text-[16px] font-medium"
+									className="text-[#23BE0A] font-work text-xs sm:text-sm lg:text-[16px] font-medium"
 								>
 									{tag}
 								</small>
 							))}
 						</div>
-						<h1 className="card-title text-[#131313] text-2xl font-bold font-play h-16">
+						<h1 className="card-title text-[#131313] text-xl lg:text-2xl font-bold font-play sm:h-20 lg:h-16">
 							{bookName}
 						</h1>
-						<p>By : {author}</p>
+						<p className="text-[#131313CC] font-work font-medium text-xs sm:text-lg lg:text-[16px]">
+							By : {author}
+						</p>
 
 						<div className="divider mt-0 mb-0"></div>
 
