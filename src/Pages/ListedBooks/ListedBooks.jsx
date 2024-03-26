@@ -14,6 +14,7 @@ import {
 
 function ListedBooks() {
 	const [isSort, setIsSort] = useState(false);
+	const [sortName, setSortName] = useState("Sort By");
 	const [readBooks, setReadBooks] = useState([]);
 	const [displayBooks, setDisplayBooks] = useState([]);
 	const [displayBooksWish, setDisplayBooksWish] = useState([]);
@@ -23,10 +24,12 @@ function ListedBooks() {
 	function handleSort(sortType) {
 		if (sortType === "rating") {
 			setIsSort(!isSort);
+			setSortName("Rating");
 			setDisplayBooks(readBooks.sort((a, b) => b.rating - a.rating));
 			setDisplayBooksWish(wishBooks.sort((a, b) => b.rating - a.rating));
 		} else if (sortType === "pageNumber") {
 			setIsSort(!isSort);
+			setSortName("Page Number");
 			setDisplayBooks(
 				readBooks.sort((a, b) => b.totalPages - a.totalPages)
 			);
@@ -35,6 +38,7 @@ function ListedBooks() {
 			);
 		} else if (sortType === "pubsishYear") {
 			setIsSort(!isSort);
+			setSortName("Publish Year");
 			setDisplayBooks(
 				readBooks.sort(
 					(a, b) => b.yearOfPublishing - a.yearOfPublishing
@@ -67,9 +71,9 @@ function ListedBooks() {
 	}, []);
 	return (
 		<>
-			<div className="container mx-auto bg-[#1313130D] mt-4 rounded-2xl flex h-[100px] items-center justify-center">
+			<div className="container mx-auto bg-[#1313130D] mt-12 rounded-2xl flex h-[100px] items-center justify-center">
 				<h1 className="text-[#131313] font-work text-3xl font-bold">
-					Books
+					{tabIndex === 0 ? "Read Books" : "Wishlist Books"}
 				</h1>
 			</div>
 
@@ -80,7 +84,7 @@ function ListedBooks() {
 					}}
 					className="flex items-center gap-4 py-3 px-10 rounded-lg text-white font-semibold text-lg font-work bg-[#23BE0A] z-30 hover:bg-opacity-90"
 				>
-					Sort By{" "}
+					{sortName}{" "}
 					{isSort ? (
 						<MdOutlineKeyboardArrowUp size={30} />
 					) : (

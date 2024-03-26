@@ -62,7 +62,7 @@ function ReadBook({ readBook }) {
 
 					<div className="divider w-full"></div>
 
-					<div className="flex justify-between w-2/5">
+					<div className="flex gap-5">
 						<button className="bg-[#328EFF26] text-[#328EFF] py-3 px-5 rounded-2xl">
 							Category: {category}
 						</button>
