@@ -71,18 +71,18 @@ function ListedBooks() {
 	}, []);
 	return (
 		<>
-			<div className="container mx-auto bg-[#1313130D] mt-12 rounded-2xl flex h-[100px] items-center justify-center">
+			<div className="container mx-auto bg-[#1313130D] mt-3 sm:mt-6 lg:mt-12 rounded-2xl flex h-[60px] sm:h-[80px] lg:h-[100px] items-center justify-center">
 				<h1 className="text-[#131313] font-work text-3xl font-bold">
 					{tabIndex === 0 ? "Read Books" : "Wishlist Books"}
 				</h1>
 			</div>
 
-			<div className="flex items-center  justify-center mt-5">
+			<div className="flex items-center  justify-center mt-2 sm:mt-3 lg:mt-5">
 				<button
 					onClick={() => {
 						setIsSort(!isSort);
 					}}
-					className="flex items-center relative gap-4 py-3 px-10 justify-between w-[20%] rounded-lg text-white font-semibold text-lg font-work bg-[#23BE0A] hover:bg-opacity-90"
+					className="flex items-center relative gap-4 py-2 px-4 sm:px-10 lg:px-10 justify-between w-[50%] sm:w-[30%] lg:w-[20%] rounded-lg text-white font-semibold text-xs sm:text-sm lg:text-lg font-work bg-[#23BE0A] hover:bg-opacity-90"
 				>
 					{sortName}{" "}
 					{isSort ? (
@@ -90,9 +90,8 @@ function ListedBooks() {
 					) : (
 						<MdOutlineKeyboardArrowDown size={30} />
 					)}
-
 					<div
-						className={`flex-col absolute top-full p-2 bg-[#1313130D] px-7 -mt- w-full -translate-x-[15%] space-y-1 text-black ${
+						className={`flex-col absolute top-full p-2 bg-[#1313130D] px-7 -mt- w-full text-xs sm:text-sm lg:text-lg rounded-xl -translate-x-[17px] sm:-translate-x-[40px] lg:-translate-x-[40px] space-y-1 text-black ${
 							isSort ? "flex" : "hidden"
 						}`}
 					>
@@ -114,13 +113,13 @@ function ListedBooks() {
 			<Tabs
 				selectedIndex={tabIndex}
 				onSelect={(index) => setTabIndex(index)}
-				className="container mx-auto space-x-5 mt-16"
+				className="container mx-auto mt-16"
 			>
 				<TabList>
 					<Tab>
 						<NavLink
 							to={""}
-							className="text-[#131313CC] font-work text-lg p-4"
+							className="text-[#131313CC] font-work text-xs sm:text-sm lg:text-lg p-0 sm:p-2 lg:p-4"
 						>
 							Read Books
 						</NavLink>
@@ -129,7 +128,7 @@ function ListedBooks() {
 					<Tab>
 						<NavLink
 							to={"wishlist"}
-							className="text-[#131313CC] font-work text-lg p-4"
+							className="text-[#131313CC] font-work text-xs sm:text-sm lg:text-lg p-0 sm:p-2 lg:p-4"
 						>
 							Wishlist Books
 						</NavLink>
