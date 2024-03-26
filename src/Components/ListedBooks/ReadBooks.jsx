@@ -2,12 +2,11 @@ import ReadBook from "./ReadBook";
 import { useOutletContext } from "react-router-dom";
 
 function ReadBooks() {
-	const readBooks = useOutletContext();
-
+	const { displayBooks } = useOutletContext();
 	return (
 		<>
 			<div className="mt-10 space-y-5">
-				{readBooks.map((readBook) => (
+				{displayBooks.map((readBook) => (
 					<ReadBook key={readBook.bookId} readBook={readBook} />
 				))}
 			</div>

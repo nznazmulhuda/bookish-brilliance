@@ -5,35 +5,50 @@ import {
 	MdOutlineKeyboardArrowUp,
 } from "react-icons/md";
 import { NavLink, Outlet } from "react-router-dom";
-import { getReadBookFromLocalStorage } from "../../utills/localStorage";
+import {
+	getReadBookFromLocalStorage,
+	getWishListBookFromLocalStorage,
+} from "../../utills/localStorage";
 
 function ListedBooks() {
 	const [isSort, setIsSort] = useState(false);
 	const [readBooks, setReadBooks] = useState([]);
-	const [displayReadBooks, setDisplayBooks] = useState([]);
+	const [displayBooks, setDisplayBooks] = useState([]);
+	const [displayBooksWish, setDisplayBooksWish] = useState([]);
+	const [wishBooks, setWishBooks] = useState([]);
 
 	function handleSort(sortType) {
 		if (sortType === "rating") {
 			setIsSort(!isSort);
 			setDisplayBooks(readBooks.sort((a, b) => a.rating - b.rating));
+			setDisplayBooksWish(wishBooks.sort((a, b) => a.rating - b.rating));
 		} else if (sortType === "pageNumber") {
 			setIsSort(!isSort);
-
-			readBooks.sort((a, b) => a.totalPages - b.totalPages);
-			setDisplayBooks(readBooks);
-			console.log("tmi page number");
+			setDisplayBooks(
+				readBooks.sort((a, b) => a.totalPages - b.totalPages)
+			);
+			setDisplayBooksWish(
+				wishBooks.sort((a, b) => a.totalPages - b.totalPages)
+			);
 		} else if (sortType === "pubsishYear") {
 			setIsSort(!isSort);
-			readBooks.sort((a, b) => a.yearOfPublishing - b.yearOfPublishing);
-			setDisplayBooks(readBooks);
-
-			console.log("se publish year");
+			setDisplayBooks(
+				readBooks.sort(
+					(a, b) => a.yearOfPublishing - b.yearOfPublishing
+				)
+			);
+			setDisplayBooksWish(
+				wishBooks.sort(
+					(a, b) => a.yearOfPublishing - b.yearOfPublishing
+				)
+			);
 		} else {
 			setDisplayBooks(readBooks);
 		}
 	}
 	useEffect(() => {
 		const books = getReadBookFromLocalStorage();
+		const wishBooks = getWishListBookFromLocalStorage();
 		fetch("/Books.json")
 			.then((res) => res.json())
 			.then((data) => {
@@ -41,9 +56,12 @@ function ListedBooks() {
 					setDisplayBooks(
 						data.filter((d) => books.includes(d.bookId))
 					);
+				setWishBooks(data.filter((d) => wishBooks.includes(d.bookId))),
+					setDisplayBooksWish(
+						data.filter((d) => wishBooks.includes(d.bookId))
+					);
 			});
 	}, []);
-
 	return (
 		<>
 			<div className="container mx-auto bg-[#1313130D] mt-4 rounded-2xl flex h-[100px] items-center justify-center">
@@ -100,7 +118,7 @@ function ListedBooks() {
 				</NavLink>
 			</div>
 
-			<Outlet context={displayReadBooks} />
+			<Outlet context={{ displayBooks, displayBooksWish }} />
 		</>
 	);
 }

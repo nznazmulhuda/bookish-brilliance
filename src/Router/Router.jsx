@@ -7,7 +7,7 @@ import {
 	Home,
 	BookDetails,
 } from "../Pages";
-import { ReadBooks } from "../Components/";
+import { ReadBooks, WishBooks } from "../Components/";
 
 const router = createBrowserRouter([
 	{
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
 					},
 					{
 						path: "wishlist",
-						element: <div>wishlist</div>,
+						element: <WishBooks />,
 					},
 				],
 			},
