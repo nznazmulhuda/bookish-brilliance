@@ -1,8 +1,35 @@
 import { Link } from "react-router-dom";
+import { allUsers } from "../../utills/localStorage";
+import { useState } from "react";
+import toast from "react-hot-toast";
 
 function SingIn() {
+	const [user, setUser] = useState("");
+	const [pass, setPass] = useState("");
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		const allUser = allUsers();
+
+		const loginData = {
+			userName: user,
+			password: pass,
+		};
+
+		if (
+			allUser.find(
+				(user) =>
+					user.userName === loginData.userName &&
+					user.password === loginData.password
+			)
+		) {
+			toast.success("Login success");
+		} else {
+			toast.error("Invalid Username or Password!");
+		}
+
+		setUser("");
+		setPass("");
 	};
 
 	return (
@@ -20,6 +47,8 @@ function SingIn() {
 								name="username"
 								id="usernameSingIn"
 								placeholder="Username"
+								onChange={(e) => setUser(e.target.value)}
+								value={user}
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 						</div>
@@ -32,6 +61,8 @@ function SingIn() {
 								name="passwordSingIn"
 								id="passwordSingIn"
 								placeholder="Password"
+								onChange={(e) => setPass(e.target.value)}
+								value={pass}
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 							<div className="flex justify-end text-xs">

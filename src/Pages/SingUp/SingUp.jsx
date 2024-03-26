@@ -1,8 +1,29 @@
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { setNewUser } from "../../utills/localStorage";
 
 function SingUp() {
+	const [userName, setUserName] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const navigate = useNavigate();
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
+
+		if (userName && email && password) {
+			const newUsers = {
+				userName: userName,
+				email: email,
+				password: password,
+			};
+			setNewUser(newUsers, navigate);
+		}
+
+		setUserName("");
+		setEmail("");
+		setPassword("");
 	};
 	return (
 		<>
@@ -19,6 +40,8 @@ function SingUp() {
 								name="username"
 								id="username"
 								placeholder="Username"
+								onChange={(e) => setUserName(e.target.value)}
+								value={userName}
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 						</div>
@@ -32,6 +55,8 @@ function SingUp() {
 								name="email"
 								id="email"
 								placeholder="Email"
+								onChange={(e) => setEmail(e.target.value)}
+								value={email}
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 						</div>
@@ -45,22 +70,12 @@ function SingUp() {
 								name="password"
 								id="password"
 								placeholder="Password"
+								onChange={(e) => setPassword(e.target.value)}
+								value={password}
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 						</div>
 
-						<div className="space-y-1">
-							<label className="block text-[#131313] font-semibold font-work">
-								Re-Password
-							</label>
-							<input
-								type="password"
-								name="password"
-								id="password"
-								placeholder="Password"
-								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
-							/>
-						</div>
 						<button className="block w-full p-3 text-center rounded-lg text-gray-900 bg-green-400 hover:bg-green-500 font-work">
 							Sign Up
 						</button>

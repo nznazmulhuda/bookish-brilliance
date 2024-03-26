@@ -45,3 +45,29 @@ export const setWishBook = (id) => {
 		toast.success("Success to add wishlist!");
 	}
 };
+
+// User id, User name, User Details save on local storage
+
+export const allUsers = () => {
+	let users = localStorage.getItem("users");
+	if (users) {
+		return JSON.parse(users);
+	}
+	return [];
+};
+
+export const setNewUser = (u, navigate) => {
+	let oldUsers = allUsers();
+	let isExist = oldUsers.find(
+		(oldUser) =>
+			oldUser.userName === u.userName || oldUser.email === u.email
+	);
+
+	if (isExist) {
+		return toast.error("Already have an account!");
+	} else {
+		localStorage.setItem("users", JSON.stringify([...oldUsers, u]));
+		navigate("/signIn");
+		return toast.success("Account registerd!");
+	}
+};
