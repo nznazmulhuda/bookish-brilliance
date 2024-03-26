@@ -77,12 +77,12 @@ function ListedBooks() {
 				</h1>
 			</div>
 
-			<div className="flex items-center relative justify-center mt-5">
+			<div className="flex items-center  justify-center mt-5">
 				<button
 					onClick={() => {
 						setIsSort(!isSort);
 					}}
-					className="flex items-center gap-4 py-3 px-10 rounded-lg text-white font-semibold text-lg font-work bg-[#23BE0A] z-30 hover:bg-opacity-90"
+					className="flex items-center relative gap-4 py-3 px-10 justify-between w-[20%] rounded-lg text-white font-semibold text-lg font-work bg-[#23BE0A] hover:bg-opacity-90"
 				>
 					{sortName}{" "}
 					{isSort ? (
@@ -90,23 +90,25 @@ function ListedBooks() {
 					) : (
 						<MdOutlineKeyboardArrowDown size={30} />
 					)}
+
+					<div
+						className={`flex-col absolute top-full p-2 bg-[#1313130D] px-7 -mt- w-full -translate-x-[15%] space-y-1 text-black ${
+							isSort ? "flex" : "hidden"
+						}`}
+					>
+						<button onClick={() => handleSort("rating")}>
+							Rating
+						</button>
+
+						<button onClick={() => handleSort("pageNumber")}>
+							Number of pages
+						</button>
+
+						<button onClick={() => handleSort("pubsishYear")}>
+							Publisher year
+						</button>
+					</div>
 				</button>
-
-				<div
-					className={`flex-col absolute top-full p-3 bg-[#1313130D] px-7 -mt-1 space-y-1 ${
-						isSort ? "flex" : "hidden"
-					}`}
-				>
-					<button onClick={() => handleSort("rating")}>Rating</button>
-
-					<button onClick={() => handleSort("pageNumber")}>
-						Number of pages
-					</button>
-
-					<button onClick={() => handleSort("pubsishYear")}>
-						Publisher year
-					</button>
-				</div>
 			</div>
 
 			<Tabs

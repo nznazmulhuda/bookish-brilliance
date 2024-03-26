@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Spinner } from "../";
 import Book from "./Book";
 
 function Books() {
@@ -9,7 +10,6 @@ function Books() {
 			.then((res) => res.json())
 			.then((data) => setBooks(data));
 	}, []);
-
 	return (
 		<>
 			<section className="py-6 sm:py-12 text-[#131313]">
@@ -18,6 +18,7 @@ function Books() {
 						<h2 className="text-[40px] font-bold font-play">
 							Books
 						</h2>
+						{books.length === 0 && <Spinner />}
 					</div>
 					<div className="grid grid-cols-3 gap-6">
 						{books.map((book) => (
