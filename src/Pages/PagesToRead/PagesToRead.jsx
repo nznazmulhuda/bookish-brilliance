@@ -37,38 +37,106 @@ const PagesToRead = () => {
 	return (
 		<>
 			{data.length > 0 ? (
-				<div
-					className={`flex items-center container mx-auto justify-center bg-[#13131308] mt-12 rounded-2xl] p-10`}
-				>
-					<BarChart
-						width={1500}
-						height={500}
-						data={data}
-						margin={{
-							top: 50,
-							right: 30,
-							left: 20,
-							bottom: 5,
-						}}
+				<>
+					<div
+						className={`hidden lg:flex items-center container mx-auto justify-center bg-[#13131308] mt-12 rounded-2xl p-10`}
 					>
-						<CartesianGrid strokeDasharray="3 3" />
-						<XAxis dataKey="bookName" />
-						<YAxis />
-						<Bar
-							dataKey="totalPages"
-							fill="#8884d8"
-							shape={<TriangleBar />}
-							label={{ position: "top" }}
+						<BarChart
+							width={1500}
+							height={500}
+							data={data}
+							margin={{
+								top: 15,
+								right: 30,
+								left: 0,
+								bottom: 10,
+							}}
 						>
-							{data.map((entry, index) => (
-								<Cell
-									key={`cell-${index}`}
-									fill={colors[index % 20]}
-								/>
-							))}
-						</Bar>
-					</BarChart>
-				</div>
+							<CartesianGrid strokeDasharray="3 3" />
+							<XAxis dataKey="bookName" />
+							<YAxis />
+							<Bar
+								dataKey="totalPages"
+								fill="#8884d8"
+								shape={<TriangleBar />}
+								label={{ position: "top" }}
+							>
+								{data.map((entry, index) => (
+									<Cell
+										key={`cell-${index}`}
+										fill={colors[index % 20]}
+									/>
+								))}
+							</Bar>
+						</BarChart>
+					</div>
+
+					<div
+						className={`hidden sm:flex lg:hidden items-center container mx-auto justify-center bg-[#13131308] mt-3 rounded-2xl`}
+					>
+						<BarChart
+							width={800}
+							height={350}
+							data={data}
+							margin={{
+								top: 15,
+								right: 30,
+								left: 0,
+								bottom: 10,
+							}}
+						>
+							<CartesianGrid strokeDasharray="3 3" />
+							<XAxis dataKey="bookName" />
+							<YAxis />
+							<Bar
+								dataKey="totalPages"
+								fill="#8884d8"
+								shape={<TriangleBar />}
+								label={{ position: "top" }}
+							>
+								{data.map((entry, index) => (
+									<Cell
+										key={`cell-${index}`}
+										fill={colors[index % 20]}
+									/>
+								))}
+							</Bar>
+						</BarChart>
+					</div>
+
+					<div
+						className={`flex sm:hidden lg:hidden items-center container mx-auto justify-center bg-[#13131308] mt-3 rounded-2xl`}
+					>
+						<BarChart
+							width={500}
+							height={350}
+							data={data}
+							margin={{
+								top: 15,
+								right: 30,
+								left: 0,
+								bottom: 10,
+							}}
+						>
+							<CartesianGrid strokeDasharray="3 3" />
+							<XAxis dataKey="bookName" />
+							<YAxis />
+							<Bar
+								dataKey="totalPages"
+								fill="#8884d8"
+								shape={<TriangleBar />}
+								label={{ position: "top" }}
+							>
+								{data.map((entry, index) => (
+									<Cell
+										key={`cell-${index}`}
+										fill={colors[index % 20]}
+									/>
+								))}
+							</Bar>
+						</BarChart>
+					</div>
+				</>
 			) : (
 				<BooksNotFound />
 			)}
