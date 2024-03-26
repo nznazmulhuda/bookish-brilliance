@@ -1,0 +1,11 @@
+.background {
+	background: linear-gradient(
+			270deg,
+			rgba(3, 7, 18, 0.275) 0%,
+			rgba(3, 7, 18, 0.159) 100%
+		),
+		url(/bannerBg.jpg);
+
+	background-size: 100% 100%;
+	border-radius: 16px;
+}

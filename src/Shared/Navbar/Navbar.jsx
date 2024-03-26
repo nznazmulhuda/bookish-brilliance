@@ -70,7 +70,7 @@ function Navbar() {
 						to={"/"}
 						className="btn btn-ghost text-[#131313] font-work text-3xl font-bold"
 					>
-						Book Vibe
+						Bookish Brilliance
 					</NavLink>
 				</div>
 

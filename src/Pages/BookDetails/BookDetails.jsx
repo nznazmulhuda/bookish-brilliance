@@ -35,7 +35,7 @@ function BookDetails() {
 				<div className="grid grid-cols-2 items-center gap-6">
 					<div className="h-[75vh] bg-[#1313130D] flex items-center justify-center rounded-3xl">
 						<img
-							className="w-3/5 h-[63vh] rounded-lg"
+							className="w-3/5 h-[70vh] rounded-lg"
 							src={image}
 							alt={bookName}
 						/>

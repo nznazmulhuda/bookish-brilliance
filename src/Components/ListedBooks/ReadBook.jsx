@@ -21,7 +21,7 @@ function ReadBook({ readBook }) {
 		<>
 			<div className="grid grid-cols-6 container mx-auto gap-4 border border-[#13131326] p-6 rounded-2xl ">
 				<div className="col-span-1 bg-[#1313130D] rounded-2xl flex items-center justify-center py-4">
-					<img className="w-[130px] rounded-lg" src={image} alt="" />
+					<img className="w-[130px] h-[26vh] rounded-lg" src={image} alt="" />
 				</div>
 
 				<div className="col-span-5">

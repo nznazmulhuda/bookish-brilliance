@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
 import BannerImage from "/banner.png";
+import "./Banner.css";
 
 function Banner() {
 	return (
 		<>
-			<section className="bg-[#1313130D] mt-12 container mx-auto text-[#131313] rounded-3xl">
+			<section className="background bg-no-repeat mt-12 container mx-auto text-[#000000f6] rounded-3xl">
 				<div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
-					<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:text-left w-2/5">
+					<div className="flex flex-col justify-center p-6 text-center rounded-sm lg:text-left w-[45%]">
 						<h1 className="text-[56px] font-bold leading-[84px] font-Play">
-							Books to freshen up your bookshelf
+							Discovering the world of books
 						</h1>
 
 						<div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">

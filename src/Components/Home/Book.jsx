@@ -10,7 +10,7 @@ function Book({ book }) {
 			<Link to={`/book_details/${bookId}`}>
 				<div className="card bg-base-100 shadow-xl p-6 pb-0 border border-[#13131326]">
 					<figure className="h-[230px] bg-[#F3F3F3] rounded-2xl">
-						<div className="w-[134px] h-[15vh]">
+						<div className="w-[134px] h-[25vh]">
 							<img
 								className="w-full h-full rounded-lg"
 								src={image}
