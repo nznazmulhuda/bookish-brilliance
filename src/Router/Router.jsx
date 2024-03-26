@@ -8,6 +8,7 @@ import {
 	BookDetails,
 	SingIn,
 	SingUp,
+	ForgetPass,
 } from "../Pages";
 import { ReadBooks, WishBooks } from "../Components/";
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
 			{
 				path: "/signUp",
 				element: <SingUp />,
+			},
+			{
+				path: "/forgetPass",
+				element: <ForgetPass />,
 			},
 		],
 	},

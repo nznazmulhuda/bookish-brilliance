@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { allUsers } from "../../utills/localStorage";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 function SingIn() {
 	const [user, setUser] = useState("");
 	const [pass, setPass] = useState("");
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -23,9 +24,16 @@ function SingIn() {
 					user.password === loginData.password
 			)
 		) {
-			toast.success("Login success");
+			navigate("/");
+			toast.success("Login success!");
+		} else if (
+			allUser.find((user) => user.userName === loginData.userName) &&
+			user.password !== loginData.password
+		) {
+			setPass("");
+			return toast.error("Incorret password");
 		} else {
-			toast.error("Invalid Username or Password!");
+			toast.error("Invalid Usernmae!");
 		}
 
 		setUser("");
@@ -66,7 +74,7 @@ function SingIn() {
 								className="w-full px-4 py-3 rounded-md focus:border-violet-400"
 							/>
 							<div className="flex justify-end text-xs">
-								<a href="#">Forgot Password?</a>
+								<Link to={"/forgetPass"}>Forgot Password?</Link>
 							</div>
 						</div>
 						<button className="block w-full p-3 text-center rounded-lg text-gray-900 bg-green-400 hover:bg-green-500 font-work">
