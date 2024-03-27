@@ -119,10 +119,21 @@ function Navbar() {
 						>
 							About Us
 						</NavLink>
+
+						<NavLink
+							to={"/subscription"}
+							className={({ isActive }) =>
+								isActive
+									? "text-[#23BE0A] text-lg font-semibold font-work border border-[#23BE0A] py-[14px] px-5 rounded-lg"
+									: "text-[#131313CC] text-lg font-work font-normal border border-transparent py-[14px] px-5 rounded-lg hover:border-[#23BE0A] hover:text-[#23BE0A]"
+							}
+						>
+							Subscription
+						</NavLink>
 					</ul>
 				</div>
 
-				<div className="hidden sm:flex lg:flex navbar-end gap-4">
+				<div className="hidden sm:hidden lg:flex navbar-end gap-4">
 					<Link to={"/signIn"} className=" font-work">
 						<button className=" font-work bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
 							Sign In
@@ -137,7 +148,7 @@ function Navbar() {
 				</div>
 			</div>
 
-			<div className="flex justify-between sm:hidden lg:hidden px-3 font-work">
+			<div className="flex justify-between sm:flex lg:hidden px-3 font-work">
 				<Link to={"/signIn"} className=" font-work">
 					<button className="bg-[#23BE0A] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
 						Sign In

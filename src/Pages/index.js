@@ -7,6 +7,7 @@ import SingIn from "./SingIn/SingIn";
 import SingUp from "./SingUp/SingUp";
 import ForgetPass from "./ForgetPass/ForgetPass";
 import AboutUs from "./AboutUs/AboutUs";
+import Subscription from "./Subscription/Subscription";
 
 export {
 	ErrorPage,
@@ -18,4 +19,5 @@ export {
 	SingUp,
 	ForgetPass,
 	AboutUs,
+	Subscription,
 };

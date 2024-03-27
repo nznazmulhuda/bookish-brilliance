@@ -7,6 +7,7 @@ import Books from "./Home/Books";
 import ReadBooks from "./ListedBooks/ReadBooks";
 import WishBooks from "./ListedBooks/WishBooks";
 import Spinner from "./Spinner/Spinner";
+import PriceCard from "./Subscription/PriceCard";
 
 export {
 	Banner,
@@ -17,5 +18,6 @@ export {
 	TeamSection,
 	Feedback,
 	GetInTouch,
-    Faq
+	Faq,
+	PriceCard,
 };

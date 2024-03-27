@@ -1,0 +1,44 @@
+[
+	{
+		"id": 1,
+		"subscription_name": "Basic",
+		"price": "$9.99",
+		"description": "Get started with essential features to enhance your reading experience.",
+		"features": [
+			"Access to basic book reviews",
+			"Limited ad-supported experience",
+			"Personalized reading recommendations",
+			"Exclusive access to author interviews",
+			"Weekly newsletter with curated book recommendations",
+			"Access to community forums for book discussions"
+		]
+	},
+	{
+		"id": 2,
+		"subscription_name": "Premium",
+		"price": "$14.99",
+		"description": "Upgrade to unlock premium content and enjoy an ad-free experience.",
+		"features": [
+			"Access to premium book reviews and analysis",
+			"Ad-free browsing experience",
+			"Early access to new content",
+			"Priority customer support",
+			"Monthly live Q&A sessions with authors",
+			"Discounts on selected book purchases"
+		]
+	},
+	{
+		"id": 3,
+		"subscription_name": "Ultimate",
+		"price": "$24.99",
+		"description": "Experience the ultimate reading journey with exclusive perks and benefits.",
+		"features": [
+			"Access to premium and exclusive book reviews",
+			"Ad-free browsing experience",
+			"Personalized concierge service for book recommendations",
+			"Exclusive invites to author events and book launches",
+			"Bi-monthly book giveaways for subscribers",
+			"Customizable reading challenges with rewards"
+		]
+	}
+]
