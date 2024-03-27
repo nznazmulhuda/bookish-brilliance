@@ -16,7 +16,7 @@ function Subscription() {
 	}, []);
 	return (
 		<>
-			<div className="mt-12 container mx-auto">
+			<div className="mt-12 container mx-auto pb-12">
 				<section className="p-4 lg:p-8 bg-[#1313130D] py-20">
 					<div className="max-w-2xl mx-auto mb-16 text-center">
 						<h2 className="text-4xl font-bold lg:text-5xl">

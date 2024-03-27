@@ -63,6 +63,28 @@ function Navbar() {
 							>
 								Pages to Read
 							</NavLink>
+
+							<NavLink
+								to={"/about_us"}
+								className={({ isActive }) =>
+									isActive
+										? "text-[#23BE0A] text-lg font-semibold font-work border border-[#23BE0A] py-[14px] px-5 rounded-lg"
+										: "text-[#131313CC] text-lg font-work font-normal border border-transparent py-[14px] px-5 rounded-lg hover:border-[#23BE0A] hover:text-[#23BE0A]"
+								}
+							>
+								About Us
+							</NavLink>
+
+							<NavLink
+								to={"/subscription"}
+								className={({ isActive }) =>
+									isActive
+										? "text-[#23BE0A] text-lg font-semibold font-work border border-[#23BE0A] py-[14px] px-5 rounded-lg"
+										: "text-[#131313CC] text-lg font-work font-normal border border-transparent py-[14px] px-5 rounded-lg hover:border-[#23BE0A] hover:text-[#23BE0A]"
+								}
+							>
+								Subscription
+							</NavLink>
 						</ul>
 					</div>
 

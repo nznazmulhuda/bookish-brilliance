@@ -19,7 +19,7 @@ function AboutUs() {
 
 	return (
 		<>
-			<div className="container mx-auto">
+			<div className="container mx-auto pb-12">
 				<section className="py-8 bg-[#1313130D] text-[#131313] rounded-xl mt-3 sm:mt-6 lg:mt-12">
 					<div className="container flex flex-col items-center justify-center p-4 mx-auto space-y-8 sm:p-10">
 						<h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">
