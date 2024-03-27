@@ -2,7 +2,7 @@
 
 Welcome to our Book Review Website! This repository contains the source code for our platform, where book lovers can discover, review, and discuss their favorite reads.
 
-#Live page: [text](https://bookish-brilliance-assignment-8.vercel.app/)
+#Live page: [Bookish Brilliance](https://bookish-brilliance-assignment-8.vercel.app/)
 
 ## Table of Contents
 
