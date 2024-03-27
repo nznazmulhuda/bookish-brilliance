@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"days_ago": 5,
+		"feedback": "I absolutely love the insightful book reviews on this website! They've helped me discover so many new authors and genres. Keep up the fantastic work!",
+		"author_name": "Emily Johnson",
+		"author_image": "/webDesigner.jpg",
+		"rating": 5
+	},
+	{
+		"id": 2,
+		"days_ago": 3,
+		"feedback": "The book recommendations here are spot-on! Thanks to this website, I've found some incredible reads that I wouldn't have discovered otherwise. Highly recommended!",
+		"author_name": "Samuel Rodriguez",
+		"author_image": "/webDeveloper.jpg",
+		"rating": 4.5
+	},
+	{
+		"id": 3,
+		"days_ago": 7,
+		"feedback": "This website is a treasure trove for book lovers! The reviews are detailed and well-written, making it easy to decide which books to add to my reading list. Kudos to the team!",
+		"author_name": "Olivia Smith",
+		"author_image": "/bookResearch.jpg",
+		"rating": 4
+	},
+	{
+		"id": 4,
+		"days_ago": 2,
+		"feedback": "I stumbled upon this website recently, and I'm so glad I did! The book reviews are informative and unbiased, and they've helped me discover some amazing reads. Thank you!",
+		"author_name": "Ethan Thompson",
+		"author_image": "/bookResearch2.webp",
+		"rating": 4.8
+	},
+	{
+		"id": 5,
+		"days_ago": 6,
+		"feedback": "I've been using this website for a while now, and I'm consistently impressed by the quality of the book reviews. They're well-written, insightful, and always help me decide which books to pick up next!",
+		"author_name": "Sophia Martinez",
+		"author_image": "/bookResearch3.webp",
+		"rating": 4.7
+	},
+	{
+		"id": 6,
+		"days_ago": 4,
+		"feedback": "As an avid reader, I rely on this website for honest and comprehensive book reviews. The ratings provided are accurate, and I appreciate the diverse range of genres covered. Keep up the excellent work!",
+		"author_name": "Jacob Lee",
+		"author_image": "/webManagment.jpg",
+		"rating": 4.9
+	}
+]

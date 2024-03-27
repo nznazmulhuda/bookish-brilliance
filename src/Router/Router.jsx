@@ -9,6 +9,7 @@ import {
 	SingIn,
 	SingUp,
 	ForgetPass,
+	AboutUs,
 } from "../Pages";
 import { ReadBooks, WishBooks } from "../Components/";
 
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
 			{
 				path: "pages_to_read",
 				element: <PagesToRead />,
+			},
+			{
+				path: "/about_us",
+				element: <AboutUs />,
+				loader: () => fetch("/feedBack.json"),
 			},
 			{
 				path: "/book_details/:id",

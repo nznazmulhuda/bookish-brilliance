@@ -108,36 +108,47 @@ function Navbar() {
 						>
 							Pages to Read
 						</NavLink>
+
+						<NavLink
+							to={"/about_us"}
+							className={({ isActive }) =>
+								isActive
+									? "text-[#23BE0A] text-lg font-semibold font-work border border-[#23BE0A] py-[14px] px-5 rounded-lg"
+									: "text-[#131313CC] text-lg font-work font-normal border border-transparent py-[14px] px-5 rounded-lg hover:border-[#23BE0A] hover:text-[#23BE0A]"
+							}
+						>
+							About Us
+						</NavLink>
 					</ul>
 				</div>
 
 				<div className="hidden sm:flex lg:flex navbar-end gap-4">
-					<button className=" font-work bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
-						<Link to={"/signIn"} className=" font-work">
+					<Link to={"/signIn"} className=" font-work">
+						<button className=" font-work bg-[#23BE0A] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
 							Sign In
-						</Link>
-					</button>
+						</button>
+					</Link>
 
-					<button className="bg-[#59C6D2] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
-						<Link to={"/signUp"} className=" font-work">
+					<Link to={"/signUp"} className=" font-work">
+						<button className="bg-[#59C6D2] sm:py-[5px] lg:py-[18px] px-3 lg:px-7 text-white font-semibold cursor-pointer font-work text-lg rounded-lg">
 							Sign Up
-						</Link>
-					</button>
+						</button>
+					</Link>
 				</div>
 			</div>
 
 			<div className="flex justify-between sm:hidden lg:hidden px-3 font-work">
-				<button className="bg-[#23BE0A] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
-					<Link to={"/signIn"} className=" font-work">
+				<Link to={"/signIn"} className=" font-work">
+					<button className="bg-[#23BE0A] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
 						Sign In
-					</Link>
-				</button>
+					</button>
+				</Link>
 
-				<button className="bg-[#59C6D2] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
-					<Link to={"/signUp"} className=" font-work">
+				<Link to={"/signUp"} className=" font-work">
+					<button className="bg-[#59C6D2] py-[9px] px-3 text-white font-semibold cursor-pointer font-work text-sm rounded-lg">
 						Sign Up
-					</Link>
-				</button>
+					</button>
+				</Link>
 			</div>
 		</>
 	);

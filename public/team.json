@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"name": "Emily Johnson",
+		"role": "Review Management",
+		"image": "/webDeveloper.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Samuel Rodriguez",
+		"role": "Content Editor",
+		"image": "/webDesigner.jpg"
+	},
+	{
+		"id": 3,
+		"name": "Olivia Smith",
+		"role": "Social Media Manager",
+		"image": "/bookResearch.jpg"
+	},
+	{
+		"id": 4,
+		"name": "Ethan Thompson",
+		"role": "Graphic Designer",
+		"image": "/bookResearch2.webp"
+	},
+	{
+		"id": 5,
+		"name": "Sophia Martinez",
+		"role": "Content Writer",
+		"image": "/bookResearch3.webp"
+	},
+	{
+		"id": 6,
+		"name": "Jacob Lee",
+		"role": "Marketing Specialist",
+		"image": "/webManagment.jpg"
+	}
+]

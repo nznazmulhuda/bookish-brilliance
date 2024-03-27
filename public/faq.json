@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"question": "How often do you post new book reviews?",
+		"answer": "We aim to post new book reviews regularly, typically several times per week. However, our posting schedule may vary depending on factors such as book releases, workload, and team availability."
+	},
+	{
+		"id": 2,
+		"question": "Do you accept book review requests from authors or publishers?",
+		"answer": "Yes, we welcome book review requests from authors and publishers. Please visit our 'Contact Us' page for submission guidelines and more information on how to submit your book for review consideration."
+	},
+	{
+		"id": 3,
+		"question": "Are your reviews unbiased?",
+		"answer": "Yes, we strive to provide honest and unbiased reviews for all books featured on our website. Our team of reviewers evaluates each book based on its own merits, regardless of the author, publisher, or any other external factors."
+	},
+	{
+		"id": 4,
+		"question": "Can I trust your ratings?",
+		"answer": "Our ratings are based on careful consideration of various factors, including writing style, plot, character development, and overall enjoyment. While ratings are subjective to some extent, we aim to provide fair and accurate assessments to help readers make informed decisions."
+	},
+	{
+		"id": 5,
+		"question": "Do you offer sponsored content or paid book reviews?",
+		"answer": "No, we do not offer sponsored content or accept payment for book reviews. Our reviews are independent and unbiased, and we do not engage in any form of paid promotion or endorsement."
+	},
+	{
+		"id": 6,
+		"question": "Can I share your reviews on my website or social media?",
+		"answer": "Yes, you are welcome to share excerpts or links to our reviews on your website or social media channels, provided that you credit us as the source. However, please refrain from reproducing the entire review without prior permission."
+	},
+	{
+		"id": 7,
+		"question": "How can I stay updated on new book reviews and website updates?",
+		"answer": "You can stay updated by subscribing to our newsletter, following us on social media, or regularly visiting our website for the latest reviews and announcements. We also recommend enabling browser notifications if available."
+	},
+	{
+		"id": 8,
+		"question": "Do you have recommendations for specific genres or age groups?",
+		"answer": "Yes, we cover a wide range of genres and age groups in our book reviews. You can explore our website by genre or use our search and filtering options to find recommendations tailored to your preferences."
+	},
+	{
+		"id": 9,
+		"question": "Can I request a specific book to be reviewed?",
+		"answer": "While we cannot guarantee that every requested book will be reviewed, we welcome suggestions from our readers. You can submit book review requests through our 'Contact Us' page, and we will consider them for future review."
+	},
+	{
+		"id": 10,
+		"question": "How can I provide feedback or report an issue with your website?",
+		"answer": "We appreciate feedback from our readers and take any issues with our website seriously. Please use the contact form on our 'Contact Us' page to reach out to us with your feedback or concerns, and we will do our best to address them promptly."
+	}
+]

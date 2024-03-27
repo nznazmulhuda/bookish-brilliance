@@ -73,7 +73,9 @@ function ListedBooks() {
 		<>
 			<div className="container mx-auto bg-[#1313130D] mt-3 sm:mt-6 lg:mt-12 rounded-2xl flex h-[60px] sm:h-[80px] lg:h-[100px] items-center justify-center">
 				<div className="text-[#131313] font-work text-3xl font-bold">
-					{tabIndex === 0 ? "Read Books" : "Wishlist Books"}
+					{tabIndex === 0
+						? `Read Books: ${displayBooks.length}`
+						: `Wishlist Books: ${displayBooksWish.length}`}
 				</div>
 			</div>
 

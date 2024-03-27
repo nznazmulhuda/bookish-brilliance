@@ -6,6 +6,7 @@ import BookDetails from "./BookDetails/BookDetails";
 import SingIn from "./SingIn/SingIn";
 import SingUp from "./SingUp/SingUp";
 import ForgetPass from "./ForgetPass/ForgetPass";
+import AboutUs from "./AboutUs/AboutUs";
 
 export {
 	ErrorPage,
@@ -15,5 +16,6 @@ export {
 	BookDetails,
 	SingIn,
 	SingUp,
-	ForgetPass
+	ForgetPass,
+	AboutUs,
 };
