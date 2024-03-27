@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"feature_title": "Personalized Recommendations",
+		"feature": "Receive tailored book recommendations based on your reading preferences, interests, and past history.",
+		"feature_image": "https://img.freepik.com/free-vector/emotion-detection-abstract-concept-illustration_335657-3699.jpg?w=740&t=st=1711525180~exp=1711525780~hmac=e2c7e4351b05949bb36f99f8f76a5b39ba96630d400caa979393968b260382c6"
+	},
+	{
+		"id": 2,
+		"feature_title": "Author Interviews",
+		"feature": "Gain insights into the minds of your favorite authors with exclusive interviews and behind-the-scenes content.",
+		"feature_image": "https://picturebooking.com/wp-content/uploads/2023/06/PodcastArtFeature-author-illustrator.jpg"
+	},
+	{
+		"id": 3,
+		"feature_title": "Ad-Free Browsing",
+		"feature": "Enjoy a seamless and distraction-free reading experience with no ads to interrupt your immersion in the content.",
+		"feature_image": "https://static.scientificamerican.com/sciam/cache/file/BB09940F-2890-47D5-8169957268DC69FC_source.png?w=1200"
+	},
+	{
+		"id": 4,
+		"feature_title": "Early Access",
+		"feature": "Be the first to access new book reviews, articles, and updates before they're available to the general public.",
+		"feature_image": "https://www.shutterstock.com/image-vector/vintage-icon-red-early-access-260nw-2169842857.jpg"
+	},
+	{
+		"id": 5,
+		"feature_title": "Community Forums",
+		"feature": "Engage with fellow book lovers in vibrant community forums, where you can discuss your favorite books, share insights, and connect with like-minded readers.",
+		"feature_image": "https://as1.ftcdn.net/v2/jpg/01/05/21/64/1000_F_105216424_uuHOJlAdH5u03RgkBSAhwaJm4Fnjo23Z.jpg"
+	},
+	{
+		"id": 6,
+		"feature_title": "Exclusive Events",
+		"feature": "Gain VIP access to exclusive author events, book signings, and literary festivals, where you can meet your favorite authors and immerse yourself in the world of literature.",
+		"feature_image": "https://www.shutterstock.com/shutterstock/photos/149992595/display_1500/stock-photo-the-word-events-in-cut-out-magazine-letters-pinned-to-a-cork-notice-board-events-may-refer-to-news-149992595.jpg"
+	}
+]
